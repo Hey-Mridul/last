@@ -9,13 +9,13 @@ html, body {
   width: 100%;
   font-family: 'Segoe UI', sans-serif;
   transition: background 0.5s ease;
+  overflow-x: hidden;
 }
 
 body {
   background: url('bg copy.png') no-repeat center center fixed;
   background-size: cover;
   color: #fff;
-  overflow-x: hidden;
 }
 
 body.dark {
@@ -24,9 +24,9 @@ body.dark {
 }
 
 #toggle-mode {
-  position: absolute;
-  top: 25px;
-  left: 25px;
+  position: fixed;
+  top: 15px;
+  left: 15px;
   background: rgba(0, 0, 0, 0.4);
   color: #fff;
   border: 1px solid #fff;
@@ -41,38 +41,38 @@ section {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
   position: relative;
+  padding-top: 80px;
 }
 
-section header {
+header {
   position: absolute;
   top: 0;
   width: 100%;
   display: flex;
   justify-content: flex-end;
   padding: 20px;
-  z-index: 10;
 }
 
-section header ul {
+header ul {
   display: flex;
   align-items: center;
 }
 
-section header ul li {
+header ul li {
   list-style: none;
   margin-left: 20px;
 }
 
-section header ul li a {
+header ul li a {
   color: #fff;
   text-decoration: none;
   font-size: 13px;
 }
 
-section header ul li button {
+header ul li button {
   background-color: #4584ef;
   border: none;
   padding: 8px 14px;
@@ -83,16 +83,17 @@ section header ul li button {
   cursor: pointer;
 }
 
-section .main {
-  width: 90%;
-  max-width: 580px;
+.main {
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   text-align: center;
+  padding: 20px;
 }
 
-section .main img {
+.main img {
   animation: fadeInUp 1s ease forwards;
   opacity: 0;
 }
@@ -114,8 +115,6 @@ section .main img {
   color: #ffd700;
   font-weight: bold;
   white-space: nowrap;
-  overflow: hidden;
-  text-align: center;
 }
 
 .cursor {
@@ -134,6 +133,7 @@ section .main img {
 .searchbox {
   position: relative;
   width: 100%;
+  max-width: 480px;
   margin-top: 20px;
 }
 
@@ -189,8 +189,6 @@ body.dark .searchbox .search {
 }
 
 .footer {
-  position: absolute;
-  bottom: 0;
   width: 100%;
   background: rgba(0,0,0,0.4);
   padding: 10px 20px;
@@ -216,4 +214,4 @@ body.dark .searchbox .search {
   color: #ccc;
   text-decoration: none;
   font-size: 14px;
- }
+}
