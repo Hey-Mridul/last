@@ -13,7 +13,7 @@ html, body {
 }
 
 body {
-  background: url('bg copy.png') no-repeat center center fixed;
+  background: linear-gradient(135deg, #667eea, #764ba2);
   background-size: cover;
   color: #fff;
 }
